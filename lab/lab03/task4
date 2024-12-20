@@ -1,0 +1,17 @@
+fibs = 0 : 1 : next fibs
+  where
+    next (a : t@(b:_)) = (a+b) : next t
+
+
+Setter første elementene til 0 og 1, 
+deretter settes neste element som en expression
+
+a = head 
+t = hele tail
+b = første element av tail
+
+t@(b:_)
+blir brukt for å få både hele tailen, og første element i tailen.
+Dette blir jo litt som pattern matching :)
+
+next t fortsetter listen med tailen.

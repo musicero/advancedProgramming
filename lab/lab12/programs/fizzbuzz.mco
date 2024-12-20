@@ -1,0 +1,37 @@
+checkFizzBuzz {
+    dup 15 % 0 ==
+} fun
+
+checkFizz {
+    dup 3 % 0 ==
+} fun
+
+checkBuzz {
+    dup 5 % 0 ==
+} fun
+
+1
+{
+  checkFizzBuzz exec
+  { "FizzBuzz" print }
+  { 
+    checkFizz exec 
+    { "Fizz" print } 
+    { 
+      checkBuzz exec
+      { "Buzz" print }
+      {
+
+        dup print
+      }
+      if
+    } 
+    if 
+  }
+  if
+
+  1 +
+} 99 for
+
+
+

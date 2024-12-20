@@ -1,0 +1,34 @@
+module Lib
+    ( readNumbers
+      biggestNumber
+      smallestNumber
+      isUnique
+      sumIsEven
+      countNum
+    ) where
+
+readNumbers :: IO [Maybe Int]
+readNumbers = do
+  line <- getLine
+  map readMaybe $ words line
+
+biggestNumber :: [Int] -> Int
+biggestNumber xs = maximum xs
+
+smallestNumber :: [Int] -> Int
+smallestNumber xs = minimum x
+
+isUnique :: Int -> Int -> Bool
+isUnique x y = x!=y
+
+sumIsEven :: Int -> Int -> Bool
+sumIsEven x y = (x+y) % 2
+
+countNum :: [Int] -> Int
+countNum num [] = 0
+countNum num (x:xs) = count num xs + num==x
+
+
+
+
+

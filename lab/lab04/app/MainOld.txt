@@ -1,0 +1,12 @@
+module Main (main) where
+
+import Lib
+
+main :: IO ()
+main = do
+  let nums = readNumbers
+  let min = smallestNumber nums
+  let max = biggestNumber nums
+  if isUnique min max && sumIsEven min max then
+    print $ countNum (min+max/2) nums
+
